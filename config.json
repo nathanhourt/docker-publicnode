@@ -1,0 +1,184 @@
+{
+  "rpc": {
+    "enable": true,
+    "rpc_user": "pnode",
+    "rpc_password": "Passer-capax-chattering-jurisprudent",
+    "rpc_endpoint": "0.0.0.0:1376",
+    "httpd_endpoint": "0.0.0.0:1377",
+    "htdocs": "./htdocs"
+  },
+  "default_peers": [
+    "5.101.106.138:1776",
+    "5.101.106.138:1777",
+    "5.101.106.138:1778",
+    "61.129.33.213:1776",
+    "80.240.133.79:1776",
+    "80.240.133.79:1777",
+    "80.240.133.79:1778",
+    "84.238.140.192:42577",
+    "89.187.144.203:8764",
+    "95.85.33.16:8764",
+    "104.131.35.149:1776",
+    "178.62.50.61:1776",
+    "178.62.50.61:1777",
+    "178.62.50.61:1778",
+    "178.62.50.61:1779",
+    "178.62.157.161:1776",
+    "180.153.142.120:1777",
+    "188.226.195.137:60696",
+    "auseednode.minebitshares.com:1776",
+    "euseednode.minebitshares.com:1776"
+  ],
+  "chain_servers": [],
+  "chain_server": {
+    "enabled": true,
+    "listen_port": 1375
+  },
+  "mail_server_enabled": true,
+  "wallet_enabled": false,
+  "ignore_console": false,
+  "logging": {
+    "includes": [],
+    "appenders": [{
+        "name": "stderr",
+        "type": "console",
+        "args": {
+          "stream": "std_error",
+          "level_colors": [{
+              "level": "debug",
+              "color": "green"
+            },{
+              "level": "warn",
+              "color": "brown"
+            },{
+              "level": "error",
+              "color": "red"
+            }
+          ]
+        },
+        "enabled": true
+      },{
+        "name": "default",
+        "type": "file",
+        "args": {
+          "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
+          "filename": "/.BitSharesX/logs/default/default.log",
+          "flush": true,
+          "truncate": false,
+          "rotate": true,
+          "rotation_interval": 3600000000,
+          "rotation_limit": 86400000000,
+          "rotation_compression": true
+        },
+        "enabled": true
+      },{
+        "name": "rpc",
+        "type": "file",
+        "args": {
+          "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
+          "filename": "/.BitSharesX/logs/rpc/rpc.log",
+          "flush": true,
+          "truncate": false,
+          "rotate": true,
+          "rotation_interval": 3600000000,
+          "rotation_limit": 86400000000,
+          "rotation_compression": true
+        },
+        "enabled": true
+      },{
+        "name": "blockchain",
+        "type": "file",
+        "args": {
+          "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
+          "filename": "/.BitSharesX/logs/blockchain/blockchain.log",
+          "flush": true,
+          "truncate": false,
+          "rotate": true,
+          "rotation_interval": 3600000000,
+          "rotation_limit": 86400000000,
+          "rotation_compression": true
+        },
+        "enabled": true
+      },{
+        "name": "p2p",
+        "type": "file",
+        "args": {
+          "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
+          "filename": "/.BitSharesX/logs/p2p/p2p.log",
+          "flush": false,
+          "truncate": false,
+          "rotate": true,
+          "rotation_interval": 3600000000,
+          "rotation_limit": 86400000000,
+          "rotation_compression": true
+        },
+        "enabled": true
+      }
+    ],
+    "loggers": [{
+        "name": "default",
+        "parent": null,
+        "level": "warn",
+        "enabled": true,
+        "additivity": false,
+        "appenders": [
+          "default",
+          "p2p"
+        ]
+      },{
+        "name": "client",
+        "parent": null,
+        "level": "warn",
+        "enabled": true,
+        "additivity": false,
+        "appenders": [
+          "default",
+          "p2p"
+        ]
+      },{
+        "name": "rpc",
+        "parent": null,
+        "level": "warn",
+        "enabled": true,
+        "additivity": false,
+        "appenders": [
+          "rpc"
+        ]
+      },{
+        "name": "p2p",
+        "parent": null,
+        "level": "warn",
+        "enabled": true,
+        "additivity": false,
+        "appenders": [
+          "p2p"
+        ]
+      },{
+        "name": "user",
+        "parent": null,
+        "level": "debug",
+        "enabled": true,
+        "additivity": false,
+        "appenders": [
+          "user"
+        ]
+      },{
+        "name": "blockchain",
+        "parent": null,
+        "level": "warn",
+        "enabled": true,
+        "additivity": false,
+        "appenders": [
+          "blockchain"
+        ]
+      }
+    ]
+  },
+  "delegate_server": "0.0.0.0:0",
+  "default_delegate_peers": [
+    "178.62.50.61:9988"
+  ],
+  "growl_notify_endpoint": null,
+  "growl_password": null,
+  "growl_bitshares_client_identifier": null
+}
