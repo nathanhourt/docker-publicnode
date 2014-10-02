@@ -1,4 +1,4 @@
-FROM nathanhourt/bitsharesx:latest
+FROM nathanhourt/docker-bitsharesx:latest
 
 COPY config.json /.BitSharesX/config.json
 COPY node_config.json /.BitSharesX/node_config.json
