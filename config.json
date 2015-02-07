@@ -171,8 +171,8 @@
   "use_upnp": true,
   "chain_servers": [],
   "chain_server": {
-    "enabled": false,
-    "listen_port": 0
+    "enabled": true,
+    "listen_port": 1375
   },
   "wallet_enabled": true,
   "min_relay_fee": 10000,
@@ -185,5 +185,5 @@
   "growl_password": null,
   "growl_bitshares_client_identifier": null,
   "mail_client_enabled": false,
-  "mail_server_enabled": false
+  "mail_server_enabled": true
 }
