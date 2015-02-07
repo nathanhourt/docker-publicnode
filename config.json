@@ -7,36 +7,6 @@
     "httpd_endpoint": "0.0.0.0:1377",
     "htdocs": "./htdocs"
   },
-  "default_peers": [
-    "5.101.106.138:1776",
-    "5.101.106.138:1777",
-    "5.101.106.138:1778",
-    "61.129.33.213:1776",
-    "80.240.133.79:1776",
-    "80.240.133.79:1777",
-    "80.240.133.79:1778",
-    "84.238.140.192:42577",
-    "89.187.144.203:8764",
-    "95.85.33.16:8764",
-    "104.131.35.149:1776",
-    "178.62.50.61:1776",
-    "178.62.50.61:1777",
-    "178.62.50.61:1778",
-    "178.62.50.61:1779",
-    "178.62.157.161:1776",
-    "180.153.142.120:1777",
-    "188.226.195.137:60696",
-    "auseednode.minebitshares.com:1776",
-    "euseednode.minebitshares.com:1776"
-  ],
-  "chain_servers": [],
-  "chain_server": {
-    "enabled": true,
-    "listen_port": 1375
-  },
-  "mail_server_enabled": true,
-  "wallet_enabled": false,
-  "ignore_console": false,
   "logging": {
     "includes": [],
     "appenders": [{
@@ -62,7 +32,7 @@
         "type": "file",
         "args": {
           "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
-          "filename": "/.BitSharesX/logs/default/default.log",
+          "filename": "logs/default/default.log",
           "flush": true,
           "truncate": false,
           "rotate": true,
@@ -76,7 +46,7 @@
         "type": "file",
         "args": {
           "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
-          "filename": "/.BitSharesX/logs/rpc/rpc.log",
+          "filename": "logs/rpc/rpc.log",
           "flush": true,
           "truncate": false,
           "rotate": true,
@@ -90,7 +60,7 @@
         "type": "file",
         "args": {
           "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
-          "filename": "/.BitSharesX/logs/blockchain/blockchain.log",
+          "filename": "logs/blockchain/blockchain.log",
           "flush": true,
           "truncate": false,
           "rotate": true,
@@ -104,7 +74,7 @@
         "type": "file",
         "args": {
           "format": "${timestamp} ${thread_name} ${context} ${file}:${line} ${method} ${level}]  ${message}",
-          "filename": "/.BitSharesX/logs/p2p/p2p.log",
+          "filename": "logs/p2p/p2p.log",
           "flush": false,
           "truncate": false,
           "rotate": true,
@@ -174,11 +144,46 @@
       }
     ]
   },
-  "delegate_server": "0.0.0.0:0",
-  "default_delegate_peers": [
-    "178.62.50.61:9988"
+  "ignore_console": false,
+  "client_debug_name": "",
+  "genesis_config": null,
+  "statistics_enabled": true,
+  "default_peers": [
+    "46.226.109.66:1776",
+    "54.77.51.177:1776",
+    "54.79.27.224:1776",
+    "61.129.33.213:1776",
+    "84.238.140.192:42577",
+    "85.214.53.224:1776",
+    "95.85.33.16:8764",
+    "104.131.35.149:1776",
+    "106.185.26.162:1776",
+    "178.62.50.61:1776",
+    "178.62.50.61:1777",
+    "178.62.50.61:1778",
+    "178.62.50.61:1779",
+    "178.62.157.161:1776",
+    "180.153.142.120:1777",
+    "185.25.22.21:1776",
+    "188.226.195.137:60696"
   ],
+  "maximum_number_of_connections": 200,
+  "use_upnp": true,
+  "chain_servers": [],
+  "chain_server": {
+    "enabled": false,
+    "listen_port": 0
+  },
+  "wallet_enabled": true,
+  "min_relay_fee": 10000,
+  "wallet_callback_url": "",
+  "light_network_fee": 25000,
+  "light_relay_fee": 25000,
+  "relay_account_name": "",
+  "faucet_account_name": "",
   "growl_notify_endpoint": null,
   "growl_password": null,
-  "growl_bitshares_client_identifier": null
+  "growl_bitshares_client_identifier": null,
+  "mail_client_enabled": false,
+  "mail_server_enabled": false
 }
