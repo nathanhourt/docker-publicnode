@@ -1,7 +1,7 @@
 FROM nathanhourt/bitshares:latest
 
-COPY config.json /.BitShares/config.json
-COPY node_config.json /.BitShares/node_config.json
+COPY config.json /root/.BitShares/config.json
+COPY node_config.json /root/.BitShares/node_config.json
 
 #Rebuild index with statistics enabled
 RUN bitshares-cli --statistics-enabled --rebuild-index
