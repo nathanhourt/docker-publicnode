@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Update system, install dependencies
+pacman -Syu --noconfirm --needed curl openssl binutils boost zlib git cmake clang ninja sudo fakeroot
+
+# Install bitsharesx
+chmod 777 -R bitshares-cli
+cd bitshares-cli
+sudo -u nobody makepkg
+pacman -U --noconfirm bitshares-cli*.pkg.tar.xz
+
+# Preload the blockchain
+mkdir -p /root/.BitShares/chain
+cd /root/.BitShares/chain
+curl https://nathanhourt.com/raw_chain.tar.xz | tar xJ
